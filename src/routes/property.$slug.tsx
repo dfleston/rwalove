@@ -145,7 +145,7 @@ const PROPERTIES: Record<string, Property> = {
 };
 
 export const Route = createFileRoute("/property/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): Property => {
     const property = PROPERTIES[params.slug];
     if (!property) throw notFound();
     return property;
