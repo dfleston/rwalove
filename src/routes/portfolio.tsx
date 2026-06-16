@@ -19,6 +19,7 @@ export const Route = createFileRoute("/portfolio")({
 
 const markets = [
   {
+    slug: "unity-homes-precinct",
     city: "Nairobi (Capital District)",
     title: "Unity Homes Precinct",
     blurb: "Infill-certified, net-positive residential blocks.",
@@ -27,6 +28,7 @@ const markets = [
     image: nairobi,
   },
   {
+    slug: "aria-towers",
     city: "Westlands Corporate Hub",
     title: "Aria Towers",
     blurb: "Grade-A office and serviced-residence mixed-use.",
@@ -35,6 +37,7 @@ const markets = [
     image: westlands,
   },
   {
+    slug: "crown-square",
     city: "Tatu City (SEZ)",
     title: "Crown Square",
     blurb: "Special economic zone — 10% corporate tax shelter.",
@@ -43,12 +46,22 @@ const markets = [
     image: tatu,
   },
   {
+    slug: "sgr-port-terminus-hub",
     city: "Mombasa Coastal",
     title: "SGR Port Terminus Hub",
     blurb: "Strategic port-adjacent warehousing facility.",
     price: "€2.5M",
     entry: "Inst. only · TRO",
     image: mombasa,
+  },
+  {
+    slug: "kilimani-premium-towers",
+    city: "Kilimani, Nairobi",
+    title: "Kilimani Premium Towers",
+    blurb: "Grade-A expatriate residential complex.",
+    price: "€50k entry",
+    entry: "Invest from €50k",
+    image: nairobi,
   },
 ];
 
@@ -79,7 +92,12 @@ function PortfolioPage() {
       <section className="border-b border-border bg-background">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
           {markets.map((m) => (
-            <article key={m.title} className="group border border-border bg-card transition-colors hover:border-gold">
+            <Link
+              key={m.title}
+              to="/property/$slug"
+              params={{ slug: m.slug }}
+              className="group block border border-border bg-card transition-colors hover:border-gold"
+            >
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
                   src={m.image}
@@ -108,7 +126,7 @@ function PortfolioPage() {
                   </span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
