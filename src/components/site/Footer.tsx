@@ -22,9 +22,9 @@ export function Footer() {
         </div>
         <div className="text-sm text-muted-foreground md:justify-self-end md:text-right">
           <div>Office locations</div>
-          <div className="mt-2 text-ink/80">Nairobi · London · Zug</div>
+          <div className="mt-2 text-ink/80">Nairobi · Madrid · Vigo</div>
           <div className="mt-4 text-xs">
-            legal@rwafrica.capital<br />+41 22 518 90 00
+            RWA@gurumbecapital.com<br />+254 (0)719480009
           </div>
         </div>
       </div>

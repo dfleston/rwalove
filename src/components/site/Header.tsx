@@ -34,7 +34,7 @@ export function Header() {
         </nav>
         <Link
           to="/apply"
-          className="inline-flex items-center justify-center border border-gold bg-gold px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-transparent hover:text-ink"
+          className="hidden md:inline-flex items-center justify-center border border-gold bg-gold px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-transparent hover:text-ink"
         >
           Apply
         </Link>

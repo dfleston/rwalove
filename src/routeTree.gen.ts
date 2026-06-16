@@ -8,12 +8,12 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root.tsx'
-import { Route as PortfolioRouteImport } from './routes/portfolio.tsx'
-import { Route as LegalRouteImport } from './routes/legal.tsx'
-import { Route as ApplyRouteImport } from './routes/apply.tsx'
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PropertySlugRouteImport } from './routes/property.$slug.tsx'
+import { Route as PropertySlugRouteImport } from './routes/property.$slug'
 
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
