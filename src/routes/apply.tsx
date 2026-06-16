@@ -2,6 +2,30 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import property from "@/assets/discovery-property.jpg";
+import beyondNightlife from "@/assets/beyond-nightlife.jpg";
+import beyondCoast from "@/assets/beyond-coast.jpg";
+import beyondSafari from "@/assets/beyond-safari.jpg";
+
+const beyond = [
+  {
+    image: beyondNightlife,
+    title: "Nairobi Nightlife & Culture",
+    blurb:
+      "Immerse yourself in Nairobi's vibrant energy with exclusive access to premium cultural venues and dining.",
+  },
+  {
+    image: beyondCoast,
+    title: "Coastal Experience",
+    blurb:
+      "Unwind at pristine Diani or Lamu beaches in curated luxury villas, exploring Kenya's rich coastal heritage.",
+  },
+  {
+    image: beyondSafari,
+    title: "The Heart of Nature",
+    blurb:
+      "Witness the breathtaking wildlife and landscapes in world-renowned national parks, enjoying a truly luxurious safari.",
+  },
+];
 
 export const Route = createFileRoute("/apply")({
   head: () => ({
