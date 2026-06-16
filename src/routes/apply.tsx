@@ -2,6 +2,30 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import property from "@/assets/discovery-property.jpg";
+import beyondNightlife from "@/assets/beyond-nightlife.jpg";
+import beyondCoast from "@/assets/beyond-coast.jpg";
+import beyondSafari from "@/assets/beyond-safari.jpg";
+
+const beyond = [
+  {
+    image: beyondNightlife,
+    title: "Nairobi Nightlife & Culture",
+    blurb:
+      "Immerse yourself in Nairobi's vibrant energy with exclusive access to premium cultural venues and dining.",
+  },
+  {
+    image: beyondCoast,
+    title: "Coastal Experience",
+    blurb:
+      "Unwind at pristine Diani or Lamu beaches in curated luxury villas, exploring Kenya's rich coastal heritage.",
+  },
+  {
+    image: beyondSafari,
+    title: "The Heart of Nature",
+    blurb:
+      "Witness the breathtaking wildlife and landscapes in world-renowned national parks, enjoying a truly luxurious safari.",
+  },
+];
 
 export const Route = createFileRoute("/apply")({
   head: () => ({
@@ -182,6 +206,55 @@ function ApplyPage() {
                   ))}
                 </ul>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Beyond the Properties */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <div className="text-center">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-gold">
+              The Full Experience
+            </div>
+            <h2 className="mt-3 font-serif text-4xl text-ink md:text-5xl">
+              Beyond the Properties
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
+              Site visits anchor the program — but Kenya is more than its
+              balance sheets. Curated, optional experiences are folded into
+              every cohort.
+            </p>
+          </div>
+
+          <div className="mt-12 space-y-6">
+            {beyond.map((b) => (
+              <article
+                key={b.title}
+                className="relative border border-border bg-card overflow-hidden"
+              >
+                <div className="relative aspect-[16/7] w-full">
+                  <img
+                    src={b.image}
+                    alt={b.title}
+                    loading="lazy"
+                    width={1280}
+                    height={560}
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-y-6 left-6 flex max-w-md items-end">
+                    <div className="border-b-2 border-gold bg-background/95 p-5 shadow-sm">
+                      <h3 className="font-serif text-2xl text-gold">
+                        {b.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/80">
+                        {b.blurb}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>

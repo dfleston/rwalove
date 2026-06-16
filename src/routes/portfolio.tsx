@@ -9,7 +9,7 @@ export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
       { title: "Portfolio & Target Markets — RWAfrica" },
-      { name: "description", content: "Institutional real estate target markets across Nairobi, Westlands, Tatu City SEZ and Mombasa coastal logistics." },
+      { name: "description", content: "Three umbrella geographies — Nairobi Capital, Tatu City SEZ, and Mombasa Coastal — anchoring institutional real estate deployment across Kenya." },
       { property: "og:title", content: "Portfolio — RWAfrica" },
       { property: "og:image", content: nairobi },
     ],
@@ -17,145 +17,260 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
 });
 
-const markets = [
-  {
-    slug: "unity-homes-precinct",
-    city: "Nairobi (Capital District)",
-    title: "Unity Homes Precinct",
-    blurb: "Infill-certified, net-positive residential blocks.",
-    price: "€296k",
-    entry: "Invest from €15k",
-    image: nairobi,
-  },
-  {
-    slug: "aria-towers",
-    city: "Westlands Corporate Hub",
-    title: "Aria Towers",
-    blurb: "Grade-A office and serviced-residence mixed-use.",
-    price: "€1.3M",
-    entry: "Invest from €15k",
-    image: westlands,
-  },
-  {
-    slug: "crown-square",
-    city: "Tatu City (SEZ)",
-    title: "Crown Square",
-    blurb: "Special economic zone — 10% corporate tax shelter.",
-    price: "€800k",
-    entry: "Invest from €15k",
-    image: tatu,
-  },
-  {
-    slug: "sgr-port-terminus-hub",
-    city: "Mombasa Coastal",
-    title: "SGR Port Terminus Hub",
-    blurb: "Strategic port-adjacent warehousing facility.",
-    price: "€2.5M",
-    entry: "Inst. only · TRO",
-    image: mombasa,
-  },
-  {
-    slug: "kilimani-premium-towers",
-    city: "Kilimani, Nairobi",
-    title: "Kilimani Premium Towers",
-    blurb: "Grade-A expatriate residential complex.",
-    price: "€50k entry",
-    entry: "Invest from €50k",
-    image: nairobi,
-  },
-];
+type Unit = {
+  slug: string;
+  title: string;
+  sub: string;
+  blurb: string;
+  price: string;
+  entry: string;
+  image: string;
+};
 
-const segments = [
-  { name: "Residential", yield: "7–9%", focus: "Grade-A Expatriate Housing" },
-  { name: "Commercial", yield: "10%", focus: "LEED-certified Office Space" },
-  { name: "Industrial", yield: "12%+", focus: "Light Industrial Warehousing" },
+type Umbrella = {
+  id: string;
+  city: string;
+  headline: string;
+  thesis: string;
+  context: string[];
+  units: Unit[];
+  hero: string;
+};
+
+const umbrellas: Umbrella[] = [
+  {
+    id: "nairobi",
+    city: "Nairobi Capital",
+    headline: "Corporate demand structurally outpaces supply.",
+    thesis:
+      "Nairobi is home to the African headquarters of over 40 multinational corporations and the ecosystem that produced M-Pesa. Corporate demand for premium serviced accommodation structurally outpaces supply — generating 80%+ annual occupancy in quality-managed stock.",
+    context: [
+      "2-bed serviced units in Westlands and Kilimani: $2,500–$4,500 USD/month",
+      "Demand driven by corporates, DFIs and tech sector — non-seasonal",
+      "USD-denominated rents insulate against Kenyan shilling volatility",
+      "Direct flights from Madrid, London, Dubai, and Amsterdam",
+    ],
+    hero: nairobi,
+    units: [
+      {
+        slug: "kilimani-premium-towers",
+        title: "Kilimani Premium Towers",
+        sub: "Kilimani · Grade-A Expatriate Residential",
+        blurb: "Serviced two- and three-bed apartments anchoring the diplomatic corridor.",
+        price: "€50k entry",
+        entry: "Invest from €50k",
+        image: nairobi,
+      },
+      {
+        slug: "unity-homes-precinct",
+        title: "Unity Homes Precinct",
+        sub: "Nairobi · Infill-Certified Residential",
+        blurb: "Net-positive residential blocks targeting young corporate professionals.",
+        price: "€296k",
+        entry: "Invest from €15k",
+        image: nairobi,
+      },
+      {
+        slug: "aria-towers",
+        title: "Aria Towers",
+        sub: "Westlands Corporate Hub · Mixed-Use",
+        blurb: "Grade-A office and serviced-residence mixed-use tower.",
+        price: "€1.3M",
+        entry: "Invest from €15k",
+        image: westlands,
+      },
+    ],
+  },
+  {
+    id: "tatu",
+    city: "Tatu City",
+    headline: "Special Economic Zone — infrastructure-stage entry.",
+    thesis:
+      "Tatu City is a 5,000-acre Special Economic Zone 30km from Nairobi CBD — Africa's most advanced planned urban development, with its own governance, power, and road infrastructure. Over 250 companies have signed up. Residential and hospitality land within the SEZ is a fundamentally different risk profile: infrastructure-stage appreciation, not current yield. The thesis is entry price and zoning certainty.",
+    context: [
+      "Special Economic Zone status: tax incentives, own governance, infrastructure",
+      "Anchor tenants include DHL, Unilever, Krones, and over 250 companies",
+      "Phase 3 residential and hospitality plots now available to investors",
+      "Nairobi CBD 30-minute drive — growing shuttle and future rail connection",
+    ],
+    hero: tatu,
+    units: [
+      {
+        slug: "crown-square",
+        title: "Crown Square",
+        sub: "Tatu City SEZ · Mixed-Use Plot",
+        blurb: "Master-planned plot under 10% corporate tax shelter regime.",
+        price: "€800k",
+        entry: "Invest from €15k",
+        image: tatu,
+      },
+    ],
+  },
+  {
+    id: "mombasa",
+    city: "Mombasa",
+    headline: "Coastal leisure with diaspora pull — premium nightly rates.",
+    thesis:
+      "Mombasa's Nyali and Bamburi shoreline is Kenya's premier coastal leisure destination. Tourism is rebounding strongly post-2022 with growing intra-African and European travel. Boutique serviced villas and apartments command premium nightly rates that outperform Nairobi on a per-night basis — with a strong right-of-use story for investors seeking physical discovery.",
+    context: [
+      "Boutique serviced units: $180–$380 USD/night (peak season)",
+      "Growing diaspora demand: Kenyan expats investing in coastal lifestyle assets",
+      "UNESCO-listed Old Town proximity adds cultural tourism draw",
+      "Seasonal profile — peak Nov–Mar aligns with European winter escape",
+    ],
+    hero: mombasa,
+    units: [
+      {
+        slug: "sgr-port-terminus-hub",
+        title: "SGR Port Terminus Hub",
+        sub: "Mombasa Coastal · Logistics-Adjacent",
+        blurb: "Strategic port-adjacent warehousing and serviced units.",
+        price: "€2.5M",
+        entry: "Inst. only · TRO",
+        image: mombasa,
+      },
+    ],
+  },
 ];
 
 function PortfolioPage() {
   return (
     <SiteLayout>
+      {/* Hero */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-20 text-center">
           <div className="text-[11px] uppercase tracking-[0.22em] text-gold">
             Portfolio
           </div>
           <h1 className="mt-3 font-serif text-5xl text-ink md:text-6xl">
-            Target Markets
+            Three Geographies. One Thesis.
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-sm text-muted-foreground">
-            Four strategic geographies. One determinate thesis for institutional
-            real estate deployment across East Africa.
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground">
+            Every asset on the platform sits inside one of three umbrella
+            markets — each with a distinct demand driver, risk profile, and
+            return shape.
           </p>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-background">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
-          {markets.map((m) => (
-            <Link
-              key={m.title}
-              to="/property/$slug"
-              params={{ slug: m.slug }}
-              className="group block border border-border bg-card transition-colors hover:border-gold"
-            >
-              <div className="aspect-[4/3] w-full overflow-hidden">
-                <img
-                  src={m.image}
-                  alt={m.title}
-                  loading="lazy"
-                  width={1024}
-                  height={768}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-5">
-                <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  {m.city}
-                </div>
-                <h3 className="mt-2 font-serif text-xl text-ink">{m.title}</h3>
-                <p className="mt-2 text-xs text-muted-foreground">{m.blurb}</p>
-                <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
-                  <div>
-                    <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                      Price from
-                    </div>
-                    <div className="font-serif text-lg text-ink">{m.price}</div>
-                  </div>
-                  <span className="bg-gold-soft px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink">
-                    {m.entry}
-                  </span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Segments */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-20">
-          <div className="text-center">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-gold">
-              Asset Segments
-            </div>
-            <h2 className="mt-3 font-serif text-4xl text-ink">By Yield Profile</h2>
-          </div>
-          <div className="mt-12 grid gap-px bg-border md:grid-cols-3">
-            {segments.map((s) => (
-              <div key={s.name} className="bg-background p-8">
-                <h3 className="font-serif text-2xl text-ink">{s.name}</h3>
-                <div className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                  Typical Yield
-                </div>
-                <div className="font-serif text-3xl text-gold">{s.yield}</div>
-                <div className="mt-3 text-sm text-ink/80">
-                  <span className="font-medium">Focus:</span> {s.focus}
-                </div>
-              </div>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            {umbrellas.map((u) => (
+              <a
+                key={u.id}
+                href={`#${u.id}`}
+                className="border border-border bg-background px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-ink/80 transition-colors hover:border-gold hover:text-ink"
+              >
+                {u.city}
+              </a>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Umbrellas */}
+      {umbrellas.map((u, idx) => (
+        <section
+          key={u.id}
+          id={u.id}
+          className={`border-b border-border ${idx % 2 === 1 ? "bg-gold-soft/20" : "bg-background"} scroll-mt-24`}
+        >
+          <div className="mx-auto max-w-7xl px-6 py-20">
+            {/* Umbrella header */}
+            <div className="grid gap-10 md:grid-cols-[1fr_1.1fr] md:items-center">
+              <div>
+                <div className="text-[11px] uppercase tracking-[0.22em] text-gold">
+                  Umbrella {String(idx + 1).padStart(2, "0")}
+                </div>
+                <h2 className="mt-3 font-serif text-5xl text-ink">{u.city}</h2>
+                <p className="mt-4 font-serif text-xl italic text-ink/80">
+                  {u.headline}
+                </p>
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                  {u.thesis}
+                </p>
+
+                <div className="mt-7 border-l-2 border-gold pl-5">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-ink">
+                    Market Context
+                  </div>
+                  <ul className="mt-3 space-y-2 text-xs text-ink/80">
+                    {u.context.map((c) => (
+                      <li key={c} className="flex items-start gap-2">
+                        <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold" />
+                        <span>{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="aspect-[4/3] w-full overflow-hidden border border-border">
+                <img
+                  src={u.hero}
+                  alt={u.city}
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Units */}
+            <div className="mt-14">
+              <div className="flex items-end justify-between border-b border-border pb-4">
+                <h3 className="font-serif text-2xl text-ink">
+                  Available Units
+                </h3>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  {u.units.length} {u.units.length === 1 ? "asset" : "assets"}
+                </span>
+              </div>
+              <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {u.units.map((m) => (
+                  <Link
+                    key={m.slug}
+                    to="/property/$slug"
+                    params={{ slug: m.slug }}
+                    className="group block border border-border bg-card transition-colors hover:border-gold"
+                  >
+                    <div className="aspect-[4/3] w-full overflow-hidden">
+                      <img
+                        src={m.image}
+                        alt={m.title}
+                        loading="lazy"
+                        width={1024}
+                        height={768}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                        {m.sub}
+                      </div>
+                      <h4 className="mt-2 font-serif text-xl text-ink">
+                        {m.title}
+                      </h4>
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        {m.blurb}
+                      </p>
+                      <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
+                        <div>
+                          <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                            Price from
+                          </div>
+                          <div className="font-serif text-lg text-ink">
+                            {m.price}
+                          </div>
+                        </div>
+                        <span className="bg-gold-soft px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink">
+                          {m.entry}
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
 
       {/* Pipeline */}
       <section className="bg-gold-soft/40">
