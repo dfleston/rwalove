@@ -268,7 +268,7 @@ function PropertyDetailPage() {
         <div className="mx-auto max-w-4xl px-6 py-16">
           <h2 className="font-serif text-4xl text-ink">The Opportunity</h2>
           <div className="mt-6 space-y-5 text-sm leading-relaxed text-ink/80 md:text-base">
-            {p.opportunity.map((para, i) => (
+            {p.opportunity.map((para: string, i: number) => (
               <p key={i}>{para}</p>
             ))}
           </div>
@@ -320,7 +320,7 @@ function PropertyDetailPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="font-serif text-4xl text-ink">Property Renders</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {p.renders.map((r, i) => (
+            {p.renders.map((r: { src: string; alt: string }, i: number) => (
               <div key={i} className="aspect-[4/3] overflow-hidden border border-border">
                 <img
                   src={r.src}
