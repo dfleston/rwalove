@@ -126,6 +126,135 @@ function HomePage() {
         </div>
       </section>
 
+      {/* INSTITUTIONAL ARCHITECTURE */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-gold">
+              Structure
+            </div>
+            <h2 className="mt-3 font-serif text-4xl text-ink md:text-5xl">
+              Institutional Architecture
+            </h2>
+          </div>
+          <div className="mt-14 flex flex-col items-stretch justify-between gap-8 md:flex-row relative">
+            {/* Connector lines (Desktop) */}
+            <div className="hidden md:block absolute top-[60px] left-[20%] right-[20%] h-px border-t border-dashed border-border z-0" />
+
+            {/* Node 1 */}
+            <div className="flex-1 border border-border bg-card p-8 relative z-10">
+              <div className="mb-6 inline-block border-b border-border pb-4 font-mono text-sm font-medium uppercase tracking-widest text-gold">
+                Tatu City SPV
+              </div>
+              <ul className="space-y-4 text-base text-muted-foreground">
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  10% corp tax
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  Zero VAT
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  Zero stamp duty
+                </li>
+              </ul>
+            </div>
+
+            {/* Connector (Mobile) */}
+            <div className="md:hidden flex justify-center text-muted-foreground">↓</div>
+
+            {/* Node 2 */}
+            <div className="flex-1 border border-border bg-card p-8 relative z-10">
+              <div className="mb-6 inline-block border-b border-border pb-4 font-mono text-sm font-medium uppercase tracking-widest text-gold">
+                EU Feeder Vehicle
+              </div>
+              <ul className="space-y-4 text-base text-muted-foreground">
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  MiCA-aligned
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  Luxembourg / Swiss
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  Double-tax treaties
+                </li>
+              </ul>
+            </div>
+
+            {/* Connector (Mobile) */}
+            <div className="md:hidden flex justify-center text-muted-foreground">↓</div>
+
+            {/* Node 3 */}
+            <div className="flex-1 border border-border bg-card p-8 relative z-10">
+              <div className="mb-6 inline-block border-b border-border pb-4 font-mono text-sm font-medium uppercase tracking-widest text-gold">
+                Investor Wallet
+              </div>
+              <ul className="space-y-4 text-base text-muted-foreground">
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  On-chain tokens
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  Re-mortgageable
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1 w-1 bg-muted-foreground" />
+                  Stablecoin loans
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY TOKENIZED */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-gold">
+              Technology
+            </div>
+            <h2 className="mt-3 font-serif text-4xl text-ink md:text-5xl">
+              Why Tokenized?
+            </h2>
+          </div>
+          <div className="mt-14 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Programmable Contracts",
+                body: "Smart contracts automate distributions, compliance checks, and investor rights — reducing administrative overhead and counterparty risk.",
+              },
+              {
+                title: "Fractional Ownership",
+                body: "Access institutional-grade assets from €10,000. Diversify across geographies, property types, and yield profiles with precision.",
+              },
+              {
+                title: "Frictionless & Legal Access",
+                body: "On-chain settlement with full KYC/AML compliance. Investor protections embedded at the protocol level, not just the prospectus.",
+              },
+              {
+                title: "More Liquid, Remortgageable",
+                body: "Tokenized real estate can be used as collateral, traded on secondary markets, and integrated into DeFi lending protocols.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-background p-8">
+                <div className="mb-3 h-1 w-8 bg-gold" />
+                <h3 className="font-serif text-2xl text-ink">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* DISCOVERY CTA */}
       <section className="bg-gold-soft/40">
         <div className="mx-auto max-w-3xl px-6 py-24 text-center">
