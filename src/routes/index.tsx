@@ -4,7 +4,7 @@ import heroCity from "@/assets/hero-city.jpg";
 
 import portfolioData from "@/data/portfolio.json";
 import propertiesData from "@/data/properties.json";
-import { FeaturedUnits } from "@/components/site/featuredunits"; // Your new component
+import { FeaturedUnits } from "@/components/site/FeaturedUnits"; // Your new component
 
 export const Route = createFileRoute("/")({
   head: () => ({
