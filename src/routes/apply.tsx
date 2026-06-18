@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import property from "@/assets/discovery-property.jpg";
@@ -38,10 +39,55 @@ export const Route = createFileRoute("/apply")({
 });
 
 const tiers = [
-  { id: "starter", name: "Starter", min: "€10,000 min", icon: "✦", perks: ["Standard tier protocol", "Group technical hosting"] },
-  { id: "explorer", name: "Explorer", min: "€25,000 min", icon: "◈", perks: ["Extended site-tour protocol", "3-on-1 technical hosting", "Fair-Play technical primacy"] },
-  { id: "vip", name: "VIP", min: "€50,000 min", icon: "★", perks: ["Private chauffeur service", "Executive dinner with founders", "Guaranteed cabana placement"], featured: true },
-  { id: "sovereign", name: "Sovereign", min: "€120,000+ min", icon: "♛", perks: ["Bespoke itinerary stream", "Legal structuring session", "Board-level reporting access"] },
+  {
+    id: "starter",
+    name: "Starter",
+    min: "€10,000 min",
+    icon: "✦",
+    perks: [
+      "Accommodation + main meals",
+      "Airport transfers",
+      "Properties visits",
+      "City excursion + nature activity",
+    ],
+  },
+  {
+    id: "explorer",
+    name: "Explorer",
+    min: "€25,000 min",
+    icon: "◈",
+    perks: [
+      "Everything in Starter",
+      "Curated cultural event",
+      "Premium safari excursion",
+    ],
+  },
+  {
+    id: "vip",
+    name: "VIP",
+    min: "€50,000 min",
+    icon: "★",
+    perks: [
+      "4-night premium itinerary",
+      "Upgraded accommodation",
+      "Full board, all meals included",
+      "Convinient trip extension"
+    ],
+    featured: true,
+  },
+  {
+    id: "sovereign",
+    name: "Sovereign",
+    min: "€120,000+ min",
+    icon: "♛",
+    perks: [
+      "5-night fully concierged trip",
+      "All expenses included",
+      "Bespoke itinerary + Exclusive dinners",
+      "Optional two cities (Nairobi and Mombasa)",
+      "Private legal structuring session with founders",
+    ],
+  },
 ];
 
 function ApplyPage() {
@@ -69,9 +115,7 @@ function ApplyPage() {
             <div className="mt-6 flex max-w-md items-start gap-3 border border-gold/40 bg-background/70 p-4">
               <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold text-[11px] font-bold text-ink">✓</span>
               <div className="text-xs text-ink/80">
-                <span className="font-semibold">Fair-Play Guarantee:</span> Your
-                fully refundable €500 deposit ensures serious intent. No
-                obligations, just genuine access.
+                <span className="font-semibold">Fair-Play Guarantee:</span> A €900 refundable deposit demonstrate serious intent. No pressure, no obligation to invest. Full terms below.
               </div>
             </div>
           </div>
@@ -88,6 +132,64 @@ function ApplyPage() {
                 Location Protocol
               </div>
               Nairobi, Kenya
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* letter */}
+      <section className="bg-gold-soft/20 py-24 px-6">
+        <div className="mx-auto max-w-4xl bg-background border border-border shadow-lg p-10 md:p-16 relative overflow-hidden">
+          {/* "Postage Stamp" Visual */}
+          <div className="absolute top-8 right-8 w-20 h-20 border-2 border-dashed border-gold/40 flex items-center justify-center rotate-6">
+            <div className="w-16 h-16 bg-gold/10" />
+          </div>
+
+          <div className="grid md:grid-cols-[2fr_1fr] gap-12 items-start">
+            {/* Card Content */}
+            <div>
+              <div className="text-[11px] uppercase tracking-[0.22em] text-gold mb-4">
+                Investor Invitation
+              </div>
+              <h2 className="font-serif text-4xl text-ink mb-6">
+                Dear Investor,
+              </h2>
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+                <p>
+                  We invite you to join a exclusive 4-day Investor Discovery Program in Nairobi at your convinience.
+                </p>
+                <p>
+                  Experience high-yield assets and local culture firsthand. Meet the team on the ground, see the portfolio in person, and judge the opportunity for yourself. Your presence helps shape the future of our community, and every visit strengthens the trust this platform is built on.
+                </p>
+              </div>
+
+              <div className="mt-8 flex items-center gap-4">
+                <Link
+                  to="/apply"
+                  className="inline-flex items-center bg-gold px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink hover:text-white"
+                >
+                  Apply for Discovery
+                </Link>
+              </div>
+            </div>
+
+            {/* Sidebar / Sign-off */}
+            <div className="md:border-l border-border md:pl-10 h-full flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="text-xs uppercase tracking-widest text-ink/60 font-semibold">
+                  To:
+                </div>
+                <div className="font-serif text-lg text-ink">
+                  Prospective<br />
+                  Founding<br />
+                  Members
+                </div>
+              </div>
+              <div className="mt-12 font-serif text-ink/70 italic">
+                With love and appreciation,<br />
+                <span className="font-bold text-ink">The Gurumbé Team</span>
+              </div>
             </div>
           </div>
         </div>
@@ -113,16 +215,16 @@ function ApplyPage() {
             <div className="border border-border bg-card p-7">
               <h3 className="font-serif text-2xl text-ink">1. You Book the Flight</h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                Secure your own route to Nairobi. We'll travel your airport
+                Secure your own route to Nairobi. We'll take care of your airport
                 pickup and everything that follows.
               </p>
             </div>
             <div className="border border-border bg-card p-7">
               <h3 className="font-serif text-2xl text-ink">2. We Host the Experience</h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                For 4 days, you are our VIP. Includes luxury accommodation
-                (Boutique stay), site intelligence, private deep-dive hours and
-                local cultural excursions.
+                For 4 to 7 days, you are our VIP Guest. Includes
+                Boutique accomodation, site intelligence, private deep-dive and
+                local cultural immersion.
               </p>
             </div>
           </div>
@@ -130,10 +232,7 @@ function ApplyPage() {
           <div className="mt-6 border border-gold/40 bg-gold-soft/40 p-7">
             <h3 className="font-serif text-2xl text-ink">Fair-Play Guarantee</h3>
             <p className="mt-2 text-sm text-ink/80">
-              To ensure we are hosting serious investors, we require a €500
-              fully refundable deposit to secure your spot. If you ask us €25,
-              €50 or more, your trip is 100% on us. If post-trip Kenyan gateway:
-              no pressure, no obligations.
+              To ensure we are hosting serious investors, we require a €900 deposit to secure your spot. No obligation to invest, just genuine access. If you invest €10,000 or more, the deposit is fully credited toward the investment; if not, a portion is retained to cover program costs.
             </p>
           </div>
         </div>
@@ -149,7 +248,7 @@ function ApplyPage() {
           <div className="mt-10 grid gap-px bg-border md:grid-cols-4">
             {[
               { n: "01", tag: "Initiate", title: "Apply", body: "Qualification review set" },
-              { n: "02", tag: "Secure", title: "Hold secure", body: "€500 hold held" },
+              { n: "02", tag: "Secure", title: "Hold secure", body: "€900 deposit held" },
               { n: "03", tag: "Logistics", title: "Book flight", body: "You handle travel" },
               { n: "04", tag: "Execute", title: "We Host", body: "Full program in Nairobi" },
             ].map((s) => (
@@ -168,48 +267,7 @@ function ApplyPage() {
         </div>
       </section>
 
-      {/* Tiers */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-20">
-          <h2 className="font-serif text-4xl text-ink">Promotional Tiers</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Structured pathways with commensurate due diligence access.
-          </p>
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {tiers.map((t, i) => (
-              <div
-                key={t.id}
-                className={`border bg-card p-7 ${
-                  t.featured
-                    ? "border-gold bg-gold-soft/40"
-                    : "border-border"
-                }`}
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-                      Tier 0{i + 1}
-                    </div>
-                    <h3 className="mt-1 font-serif text-3xl text-ink">{t.name}</h3>
-                    <div className="mt-1 text-sm font-medium text-gold">
-                      {t.min}
-                    </div>
-                  </div>
-                  <span className="text-2xl text-gold">{t.icon}</span>
-                </div>
-                <ul className="mt-5 space-y-2 border-t border-border/70 pt-4 text-sm text-ink/80">
-                  {t.perks.map((p) => (
-                    <li key={p} className="flex items-start gap-2">
-                      <span className="mt-1 h-1 w-1 rounded-full bg-gold" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Beyond the Properties */}
       <section className="border-b border-border">
@@ -260,6 +318,50 @@ function ApplyPage() {
         </div>
       </section>
 
+      {/* Tiers */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <h2 className="font-serif text-4xl text-ink">Promotional Tiers</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Structured packages for different discovery visits and access to ownership.
+          </p>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {tiers.map((t, i) => (
+              <div
+                key={t.id}
+                className={`border bg-card p-7 ${t.featured
+                  ? "border-gold bg-gold-soft/40"
+                  : "border-border"
+                  }`}
+              >
+                <div className="flex items-start justify-between">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                      Tier 0{i + 1}
+                    </div>
+                    <h3 className="mt-1 font-serif text-3xl text-ink">{t.name}</h3>
+                    <div className="mt-1 text-sm font-medium text-gold">
+                      {t.min}
+                    </div>
+                  </div>
+                  <span className="text-2xl text-gold">{t.icon}</span>
+                </div>
+                <ul className="mt-5 space-y-2 border-t border-border/70 pt-4 text-sm text-ink/80">
+                  {t.perks.map((p) => (
+                    <li key={p} className="flex items-start gap-2">
+                      <span className="mt-1 h-1 w-1 rounded-full bg-gold" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
       {/* Form */}
       <section className="bg-gold-soft/30">
         <div className="mx-auto max-w-2xl px-6 py-20">
@@ -271,7 +373,7 @@ function ApplyPage() {
               <div className="mt-8 text-center text-sm text-ink/80">
                 <div className="mx-auto mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gold text-xl text-ink">✓</div>
                 <p>Thank you. A member of our investor relations team will
-                be in touch within one business day.</p>
+                  be in touch within one business day.</p>
               </div>
             ) : (
               <form

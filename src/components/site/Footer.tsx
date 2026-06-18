@@ -24,7 +24,7 @@ export function Footer() {
           <div>Office locations</div>
           <div className="mt-2 text-ink/80">Nairobi · Madrid · Vigo</div>
           <div className="mt-4 text-xs">
-            RWA@gurumbecapital.com<br />+254 (0)719480009
+            info@gurumbecapital.com<br />+254 (0)719480009
           </div>
         </div>
       </div>

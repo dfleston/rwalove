@@ -164,7 +164,7 @@
         "name": "The Oak Residences",
         "location": "Nairobi, Kenya. Premium Boutique Residential Development.",
         "tagline": "Curated Modern Living",
-        "hero": "images/properties/oak/hero.jpg",
+        "hero": "images/properties/oak/hero.png",
         "targetYield": "9–12%",
         "minInvestment": "€25,000",
         "status": "Pre-Launch",
@@ -376,6 +376,84 @@
                 "name": "Fully Equipped Gym",
                 "description": "State-of-the-art gym with modern equipment for comprehensive fitness workouts.",
                 "emoji": "🏋️‍♂️"
+            }
+        ]
+    },
+    "moorings": {
+        "slug": "moorings",
+        "name": "Moorings Sea View Residence",
+        "location": "The Moorings Bar & Restaurant, Malindi Road, Mtwapa, Shimo La Tewa ward, Kilifi South, Kilifi County, Kenya.",
+        "tagline": "Sea View Residence",
+        "hero": "images/properties/moorings/hero.png",
+        "targetYield": "Not specified",
+        "minInvestment": "From KES 3,400,000",
+        "status": "On Going",
+        "irr": "Not specified",
+        "exit": "Not specified",
+        "holdPeriod": "Not specified",
+        "ticketEntry": "From KES 3,400,000",
+        "opportunity": [
+            "A prime residential development located in Mtwapa, Kilifi County, offering sea view living."
+        ],
+        "amenities": [
+            {
+                "name": "24 Hour Security",
+                "description": "Round-the-clock security surveillance.",
+                "emoji": "🛡️"
+            },
+            {
+                "name": "Back-up Generator",
+                "description": "Reliable power backup system.",
+                "emoji": "⚡"
+            },
+            {
+                "name": "Borehole Water",
+                "description": "Independent water supply source.",
+                "emoji": "💧"
+            },
+            {
+                "name": "CCTV Surveillance",
+                "description": "Enhanced security monitoring.",
+                "emoji": "📹"
+            },
+            {
+                "name": "Club-house",
+                "description": "Dedicated space for social gatherings.",
+                "emoji": "🏠"
+            },
+            {
+                "name": "Gym",
+                "description": "On-site fitness facilities.",
+                "emoji": "🏋️"
+            },
+            {
+                "name": "High-speed Elevator",
+                "description": "Efficient vertical transportation.",
+                "emoji": "🛗"
+            },
+            {
+                "name": "Parking Space",
+                "description": "Secure parking facilities for residents.",
+                "emoji": "🚗"
+            },
+            {
+                "name": "Swimming Pool",
+                "description": "Modern swimming pool area.",
+                "emoji": "🏊"
+            }
+        ],
+        "renders": [
+            {
+                "src": "images/properties/moorings/slide1.png",
+                "alt": "Moorings Sea View Residence 1"
+            },
+            {
+                "src": "images/properties/moorings/slide2.png",
+                "alt": "Moorings Sea View Residence 2"
+            },
+            {
+                "src": "images/properties/moorings/slide3.png",
+                "alt": "Moorings Sea View Residence 3"
             }
         ]
     }

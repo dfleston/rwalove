@@ -12,8 +12,6 @@
         ],
         "hero": "images/cities/market-nairobi.jpg",
         "units": [
-            "kilimani-premium-towers",
-            "aria-towers",
             "oak",
             "gemini-residency",
             "grosvenor-residency"
@@ -47,9 +45,9 @@
             "UNESCO-listed Old Town proximity adds cultural tourism draw",
             "Seasonal profile — peak Nov–Mar aligns with European winter escape"
         ],
-        "hero": "images/properties/market-mombasa.jpg",
+        "hero": "images/cities/market-mombasa.png",
         "units": [
-            "sgr-port-terminus-hub"
+            "moorings"
         ]
     }
 ]

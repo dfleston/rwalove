@@ -5,7 +5,7 @@ export const Route = createFileRoute("/legal")({
   head: () => ({
     meta: [
       { title: "Legal & Regulatory — RWAfrica" },
-      { name: "description", content: "Transparent institutional architecture: Luxembourg SCSp feeder, SPV SEZ, MiCA-compliant security tokens." },
+      { name: "description", content: "Transparent institutional architecture: Spanish ETVE, SPV SEZ, MiCA-compliant security tokens." },
     ],
   }),
   component: LegalPage,
@@ -38,7 +38,7 @@ function LegalPage() {
               <div className="mt-10 flex flex-wrap items-center justify-between gap-y-8">
                 {[
                   { title: "Investor Wallet", sub: "Self-Custodial / Institutional", icon: "🛡" },
-                  { title: "EU Feeder Vehicle", sub: "Luxembourg SCSp", icon: "€" },
+                  { title: "EU Holding Vehicle", sub: "Spanish ETVE", icon: "€" },
                   { title: "SPV SEZ", sub: "Kenyan PropCo", icon: "📄" },
                 ].map((node, i, arr) => (
                   <div key={node.title} className="flex items-center">
@@ -66,7 +66,7 @@ function LegalPage() {
               <ul className="mt-6 space-y-4 text-sm text-ink/85">
                 {[
                   ["Tatu City SEZ", "Conferred specific tax & regulatory advantages under Kenyan law."],
-                  ["EU Feeder (MiCA)", "Compliant with Markets in Crypto-Assets regulation for transparency."],
+                  ["EU Holding + ERIR Partnership (MiCA)", "Compliant with Markets in Crypto-Assets regulation for transparency."],
                   ["Tax Efficiency", "Optimized frameworks including 10% Corp tax vs. standard 30%."],
                 ].map(([k, v]) => (
                   <li key={k} className="flex items-start gap-3">
@@ -120,7 +120,7 @@ function LegalPage() {
                 Compliance Contact
               </div>
               <div className="mt-3 space-y-1 text-sm text-ink/80">
-                <div>legal@rwafrica.capital</div>
+                <div>info@gurumbecapital.com</div>
                 <div>+41 22 518 90 00</div>
                 <div className="text-muted-foreground">
                   Route de Meyrin 49, Geneva
