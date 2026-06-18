@@ -31,9 +31,6 @@ const PROPERTIES = propertiesData as Record<string, Property>;
 
 
 
-
-
-
 export const Route = createFileRoute("/portfolio/")({
   head: () => ({
     meta: [

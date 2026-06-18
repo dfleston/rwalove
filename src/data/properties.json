@@ -1,164 +1,4 @@
 {
-    "kilimani-premium-towers": {
-        "slug": "kilimani-premium-towers",
-        "name": "Kilimani Premium Towers",
-        "location": "Nairobi, Kenya. Grade-A Expat Residential Complex.",
-        "tagline": "Grade-A Expatriate Residential",
-        "hero": "images/properties/kilimani-premium-towers/hero.jpg",
-        "targetYield": "8–12%",
-        "minInvestment": "€50,000",
-        "status": "Construction Phase",
-        "irr": "15%",
-        "exit": "Refinance / Sale in 5 Years",
-        "holdPeriod": "5 Years",
-        "ticketEntry": "€25k",
-        "opportunity": [
-            "The Kilimani submarket sits at the intersection of diplomatic, NGO, and multinational demand in Nairobi — a structural shortage of Grade-A expatriate housing has compressed vacancy to under 4% while rental indices continue to outpace inflation.",
-            "Premium Towers is positioned as a fully serviced, 18-storey residential complex with concierge, backup power, and on-site amenities — the precise specification that institutional tenants underwrite at a premium. Pre-leasing intent has been secured from three multinational anchors prior to completion."
-        ],
-        "renders": [
-            {
-                "src": "images/properties/kilimani-premium-towers/render-living.jpg",
-                "alt": "Living room render"
-            },
-            {
-                "src": "images/properties/kilimani-premium-towers/render-exterior.jpg",
-                "alt": "Exterior render"
-            },
-            {
-                "src": "images/properties/kilimani-premium-towers/render-bedroom.jpg",
-                "alt": "Bedroom render"
-            }
-        ]
-    },
-    "unity-homes-precinct": {
-        "slug": "unity-homes-precinct",
-        "name": "Unity Homes Precinct",
-        "location": "Nairobi (Capital District). Infill-certified residential.",
-        "tagline": "Net-Positive Residential Blocks",
-        "hero": "images/properties/unity-homes-precinct/hero.jpg",
-        "targetYield": "7–9%",
-        "minInvestment": "€15,000",
-        "status": "Phase II Delivery",
-        "irr": "12%",
-        "exit": "Stabilised Hold / Refinance",
-        "holdPeriod": "7 Years",
-        "ticketEntry": "€15k",
-        "opportunity": [
-            "Unity Homes is the largest EDGE-certified residential precinct in East Africa, addressing the structural shortfall in middle-income housing within the Nairobi Capital District.",
-            "The precinct operates on a build-to-rent model with sale-and-leaseback structuring, providing institutional investors with predictable, indexed cashflows backed by a curated tenant pool."
-        ],
-        "renders": [
-            {
-                "src": "images/properties/unity-homes-precinct/exterior.jpg",
-                "alt": "Exterior render"
-            },
-            {
-                "src": "images/properties/unity-homes-precinct/living.jpg",
-                "alt": "Living room render"
-            },
-            {
-                "src": "images/properties/unity-homes-precinct/bedroom.jpg",
-                "alt": "Bedroom render"
-            }
-        ]
-    },
-    "aria-towers": {
-        "slug": "aria-towers",
-        "name": "Aria Towers",
-        "location": "Westlands Corporate Hub, Nairobi. Mixed-use Grade-A.",
-        "tagline": "Grade-A Office & Serviced Residence",
-        "hero": "images/properties/aria-towers/hero.jpg",
-        "targetYield": "9–11%",
-        "minInvestment": "€50,000",
-        "status": "Lease-Up",
-        "irr": "14%",
-        "exit": "Trade Sale to REIT",
-        "holdPeriod": "6 Years",
-        "ticketEntry": "€15k",
-        "opportunity": [
-            "Westlands is Nairobi's primary corporate hub, hosting regional headquarters for the majority of multinational firms operating in East Africa. Grade-A vacancy remains below 6% with rental growth trending double digits.",
-            "Aria Towers combines premium office floors with serviced residences above — a counter-cyclical mix that has historically outperformed single-use assets across cycles."
-        ],
-        "renders": [
-            {
-                "src": "images/properties/aria-towers/hero.jpg",
-                "alt": "Tower exterior"
-            },
-            {
-                "src": "images/properties/aria-towers/living.jpg",
-                "alt": "Living room render"
-            },
-            {
-                "src": "images/properties/aria-towers/exterior.jpg",
-                "alt": "Exterior render"
-            }
-        ]
-    },
-    "crown-square": {
-        "slug": "crown-square",
-        "name": "Crown Square",
-        "location": "Tatu City SEZ. Special Economic Zone Anchor.",
-        "tagline": "SEZ Corporate Tax Shelter",
-        "hero": "images/properties/crown-square/hero.jpg",
-        "targetYield": "10–13%",
-        "minInvestment": "€50,000",
-        "status": "Pre-Construction",
-        "irr": "17%",
-        "exit": "Institutional Recap",
-        "holdPeriod": "5 Years",
-        "ticketEntry": "€15k",
-        "opportunity": [
-            "Tatu City is a licensed Special Economic Zone offering a 10% corporate tax rate, VAT exemptions, and accelerated permitting. Crown Square is the SEZ's flagship mixed-use precinct.",
-            "Investors benefit from the SEZ's structural tax shelter while gaining exposure to one of the fastest-growing satellite cities on the continent, anchored by global tenants relocating from the Nairobi CBD."
-        ],
-        "renders": [
-            {
-                "src": "images/properties/crown-square/hero.jpg",
-                "alt": "SEZ render"
-            },
-            {
-                "src": "images/properties/crown-square/exterior.jpg",
-                "alt": "Exterior render"
-            },
-            {
-                "src": "images/properties/crown-square/living.jpg",
-                "alt": "Interior render"
-            }
-        ]
-    },
-    "sgr-port-terminus-hub": {
-        "slug": "sgr-port-terminus-hub",
-        "name": "SGR Port Terminus Hub",
-        "location": "Mombasa Coastal. Port-Adjacent Logistics.",
-        "tagline": "Strategic Logistics Warehousing",
-        "hero": "images/properties/sgr-port-terminus-hub/hero.jpg",
-        "targetYield": "11–14%",
-        "minInvestment": "€250,000",
-        "status": "Institutional Only · TRO",
-        "irr": "18%",
-        "exit": "Sale-Leaseback / Refinance",
-        "holdPeriod": "8 Years",
-        "ticketEntry": "Inst. only",
-        "opportunity": [
-            "Mombasa is the gateway port for East and Central Africa, with the Standard Gauge Railway terminus driving an inland container surge that has outstripped warehouse supply by a wide margin.",
-            "The Terminus Hub is a Grade-A logistics facility positioned for long-term net leases to global 3PL operators, with cashflows backed by hard-currency contracts."
-        ],
-        "renders": [
-            {
-                "src": "images/properties/sgr-port-terminus-hub/hero.jpg",
-                "alt": "Port render"
-            },
-            {
-                "src": "images/properties/sgr-port-terminus-hub/exterior.jpg",
-                "alt": "Exterior render"
-            },
-            {
-                "src": "images/properties/sgr-port-terminus-hub/facility.jpg",
-                "alt": "Facility render"
-            }
-        ]
-    },
     "oak": {
         "slug": "oak",
         "name": "The Oak Residences",
@@ -247,35 +87,61 @@
     },
     "jabali": {
         "slug": "jabali",
-        "name": "One Bedroom",
-        "location": "Gateway Capital City. Located in a premium neighborhood undergoing major urban regeneration.",
-        "tagline": "Sustainable High-Rise Luxury",
-        "hero": "images/properties/jabali/hero.jpg",
-        "targetYield": "9–11.5%",
-        "minInvestment": "$25,000",
-        "status": "Completed",
-        "irr": "16.5%",
-        "exit": "Capital Refinance / Institutional Sale",
-        "holdPeriod": "5 Years",
-        "ticketEntry": "$25k",
+        "name": "Jabali Towers One-Bedroom Apartment",
+        "location": "Tatu City, Kiambu County, Kenya.",
+        "tagline": "Your Private Sanctuary in the City",
+        "hero": "images/properties/jabali/hero.png",
+        "targetYield": "Stable rental yields",
+        "minInvestment": "EUR 87,000",
+        "status": "Available",
+        "irr": "Not specified",
+        "exit": "Capital appreciation",
+        "holdPeriod": "Not specified",
+        "ticketEntry": "USD 128,900",
         "opportunity": [
-            "Sustainable residential and commercial high-rise asset utilizing innovative clean-tech insulation and solar storage.",
-            "Modern open-plan layouts with quartz-topped prep islands and integrated high-velocity cooling.",
-            "Tier-1 construction developer with an exceptional portfolio track record.",
-            "Excellent yield potential driven by local urban regeneration plans."
+            "Crafted for individuals or couples who value privacy, comfort, and convenience.",
+            "Features a well-proportioned living space, an ensuite bedroom, and a private balcony overlooking the city's greenery and skyline.",
+            "Located within a thriving ecosystem of long-term value in Tatu City."
+        ],
+        "amenities": [
+            {
+                "name": "Concierge & 24/7 Security",
+                "description": "Professional concierge and round-the-clock security services.",
+                "emoji": "🛡️"
+            },
+            {
+                "name": "Infinity Swimming Pool",
+                "description": "World-class infinity pool for relaxation.",
+                "emoji": "🏊‍♂️"
+            },
+            {
+                "name": "Gym & Wellness Centre",
+                "description": "Fully equipped fitness and wellness facilities.",
+                "emoji": "🏋️‍♂️"
+            },
+            {
+                "name": "Outdoor Leisure",
+                "description": "Cycling tracks, jogging trails, and BBQ/lounge areas.",
+                "emoji": "🌳"
+            },
+            {
+                "name": "Jacuzzi & Leisure Decks",
+                "description": "Dedicated spaces for leisure and relaxation.",
+                "emoji": "🛁"
+            }
         ],
         "renders": [
             {
-                "src": "images/properties/jabali/render_1.jpg",
-                "alt": "Modern high-rise exterior"
+                "src": "images/properties/jabali/slide1.png",
+                "alt": "Jabali Towers One-Bedroom Exterior"
             },
             {
-                "src": "images/properties/jabali/render_2.jpg",
-                "alt": "Open-plan kitchen with quartz-topped island"
+                "src": "images/properties/jabali/slide2.png",
+                "alt": "Jabali Towers One-Bedroom Exterior"
             },
             {
-                "src": "images/properties/jabali/render_3.jpg",
-                "alt": "Spacious living area with bespoke oak elements"
+                "src": "images/properties/jabali/slide3.png",
+                "alt": "Jabali Towers One-Bedroom Living Space"
             }
         ]
     },
