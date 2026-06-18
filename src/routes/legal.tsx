@@ -5,7 +5,7 @@ export const Route = createFileRoute("/legal")({
   head: () => ({
     meta: [
       { title: "Legal & Regulatory — RWAfrica" },
-      { name: "description", content: "Transparent institutional architecture: Luxembourg SCSp feeder, Tatu City SPV, MiCA-compliant security tokens." },
+      { name: "description", content: "Transparent institutional architecture: Luxembourg SCSp feeder, SPV SEZ, MiCA-compliant security tokens." },
     ],
   }),
   component: LegalPage,
@@ -39,7 +39,7 @@ function LegalPage() {
                 {[
                   { title: "Investor Wallet", sub: "Self-Custodial / Institutional", icon: "🛡" },
                   { title: "EU Feeder Vehicle", sub: "Luxembourg SCSp", icon: "€" },
-                  { title: "Tatu City SPV", sub: "Kenyan PropCo", icon: "📄" },
+                  { title: "SPV SEZ", sub: "Kenyan PropCo", icon: "📄" },
                 ].map((node, i, arr) => (
                   <div key={node.title} className="flex items-center">
                     <div className="flex w-36 flex-col items-center text-center">

@@ -3,8 +3,9 @@ import { Link } from "@tanstack/react-router";
 const navLinks = [
   { to: "/", label: "Thesis" },
   { to: "/portfolio", label: "Portfolio" },
-  { to: "/legal", label: "Technical" },
-  { to: "/apply", label: "Waitlist" },
+  { to: "/apply", label: "Discovery" },
+  { to: "/legal", label: "Legal" },
+
 ] as const;
 
 export function Header() {

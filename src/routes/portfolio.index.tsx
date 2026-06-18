@@ -29,6 +29,11 @@ type Property = {
 const umbrellas = portfolioData as Umbrella[];
 const PROPERTIES = propertiesData as Record<string, Property>;
 
+
+
+
+
+
 export const Route = createFileRoute("/portfolio/")({
   head: () => ({
     meta: [

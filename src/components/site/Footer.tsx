@@ -17,7 +17,7 @@ export function Footer() {
             <li><a href="#" className="hover:text-ink">Legal Registry</a></li>
             <li><a href="#" className="hover:text-ink">Privacy Protocol</a></li>
             <li><a href="#" className="hover:text-ink">Investor Relations</a></li>
-            <li><a href="#" className="hover:text-ink">Tatu City SPV Documents</a></li>
+            <li><a href="#" className="hover:text-ink">SPV SEZ Documents</a></li>
           </ul>
         </div>
         <div className="text-sm text-muted-foreground md:justify-self-end md:text-right">
