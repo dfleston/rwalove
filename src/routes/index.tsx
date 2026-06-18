@@ -150,7 +150,7 @@ function HomePage() {
       <section className="border-b border-border bg-card/10">
         <div className="mx-auto max-w-7xl px-6 py-24 grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:items-start">
           {/* Left Block */}
-          <div className="sticky top-24">
+          <div className="sticky top-24 z-10 bg-background pb-4">
             <div className="text-[11px] uppercase tracking-[0.22em] text-gold">
               Macro Thesis
             </div>
@@ -235,7 +235,7 @@ function HomePage() {
 
           {/* You can pass specific slugs here to feature them */}
           <FeaturedUnits
-            units={["kilimani-premium-towers", "jabali", "sgr-port-terminus-hub"]}
+            units={["jabali", "moorings", "oak"]}
             propertiesData={propertiesData as Record<string, Property>}
           />
         </div>

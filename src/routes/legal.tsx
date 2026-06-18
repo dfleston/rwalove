@@ -92,7 +92,7 @@ function LegalPage() {
                     <tr>
                       <td className="border-b border-border p-4">Token Type</td>
                       <td className="border-b border-l border-border p-4">Real World Asset (RWA) Backed Security Token</td>
-                      <td className="border-b border-l border-border p-4">Reg D (US) / MiCA Compliant Security Instrument (EU)</td>
+                      <td className="border-b border-l border-border p-4">MiCA Compliant Security Instrument (EU)</td>
                     </tr>
                     <tr>
                       <td className="p-4">Underlying</td>

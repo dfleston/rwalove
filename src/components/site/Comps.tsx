@@ -5,13 +5,12 @@ export function MarketComparisonTable() {
         { region: "Europe", city: "Madrid, Spain", yield: "4.0% – 5.5%", appreciation: "3% – 5%" },
         { region: "Europe", city: "Paris, France", yield: "2.5% – 3.5%", appreciation: "1% – 2%" },
         { region: "Europe", city: "Berlin, Germany", yield: "3.0% – 4.0%", appreciation: "0% – 2%" },
-        { region: "Europe", city: "Rome, Italy", yield: "3.5% – 4.5%", appreciation: "1% – 3%" },
         { region: "Europe", city: "Amsterdam, Netherlands", yield: "3.0% – 4.0%", appreciation: "2% – 4%" },
         { region: "Africa", city: "Nairobi, Kenya", yield: "6.0% – 10.0%", appreciation: "4% – 12%", highlight: true },
         { region: "Africa", city: "Accra, Ghana", yield: "7.0% – 11.0%", appreciation: "5% – 8%", highlight: true },
         { region: "Africa", city: "Lagos, Nigeria", yield: "8.0% – 12.0%", appreciation: "6% – 10%", highlight: true },
         { region: "Africa", city: "Cairo, Egypt", yield: "6.0% – 9.0%", appreciation: "7% – 15%", highlight: true },
-        { region: "Africa", city: "Johannesburg, South Africa", yield: "7.0% – 10.0%", appreciation: "2% – 5%", highlight: true },
+
     ];
 
     return (
@@ -26,7 +25,7 @@ export function MarketComparisonTable() {
                     <table className="w-full text-left text-sm">
                         <thead className="bg-card text-muted-foreground uppercase text-[10px] tracking-widest">
                             <tr>
-                                <th className="px-6 py-4">Region</th>
+
                                 <th className="px-6 py-4">City</th>
                                 <th className="px-6 py-4">Est. Rental Yield</th>
                                 <th className="px-6 py-4">Est. Capital Apprec.</th>
@@ -35,7 +34,7 @@ export function MarketComparisonTable() {
                         <tbody className="divide-y divide-border">
                             {markets.map((m, i) => (
                                 <tr key={i} className={`${m.highlight ? "bg-gold-soft/10" : "bg-background"}`}>
-                                    <td className="px-6 py-4 font-semibold text-ink">{m.region}</td>
+
                                     <td className="px-6 py-4 text-ink">{m.city}</td>
                                     <td className="px-6 py-4 font-mono font-medium">{m.yield}</td>
                                     <td className="px-6 py-4 font-mono font-medium">{m.appreciation}</td>
