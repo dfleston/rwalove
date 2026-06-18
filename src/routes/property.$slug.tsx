@@ -1,13 +1,17 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
-import propertyKilimani from "@/assets/property-kilimani.jpg";
-import renderLiving from "@/assets/render-living.jpg";
-import renderBedroom from "@/assets/render-bedroom.jpg";
-import renderExterior from "@/assets/render-exterior.jpg";
+import * as Icons from "lucide-react";
 import nairobi from "@/assets/market-nairobi.jpg";
 import westlands from "@/assets/market-westlands.jpg";
 import tatu from "@/assets/market-tatu.jpg";
 import mombasa from "@/assets/market-mombasa.jpg";
+import propertiesData from "@/data/properties.json";
+
+type Amenity = {
+  name: string;
+  description: string;
+  icon: string; // Will match Lucide icon component names
+};
 
 type Property = {
   slug: string;
@@ -23,126 +27,11 @@ type Property = {
   holdPeriod: string;
   ticketEntry: string;
   opportunity: string[];
+  amenities: Amenity[];
   renders: { src: string; alt: string }[];
 };
 
-const PROPERTIES: Record<string, Property> = {
-  "kilimani-premium-towers": {
-    slug: "kilimani-premium-towers",
-    name: "Kilimani Premium Towers",
-    location: "Nairobi, Kenya. Grade-A Expat Residential Complex.",
-    tagline: "Grade-A Expatriate Residential",
-    hero: propertyKilimani,
-    targetYield: "8–12%",
-    minInvestment: "€50,000",
-    status: "Construction Phase",
-    irr: "15%",
-    exit: "Refinance / Sale in 5 Years",
-    holdPeriod: "5 Years",
-    ticketEntry: "€25k",
-    opportunity: [
-      "The Kilimani submarket sits at the intersection of diplomatic, NGO, and multinational demand in Nairobi — a structural shortage of Grade-A expatriate housing has compressed vacancy to under 4% while rental indices continue to outpace inflation.",
-      "Premium Towers is positioned as a fully serviced, 18-storey residential complex with concierge, backup power, and on-site amenities — the precise specification that institutional tenants underwrite at a premium. Pre-leasing intent has been secured from three multinational anchors prior to completion.",
-    ],
-    renders: [
-      { src: renderLiving, alt: "Living room render" },
-      { src: renderExterior, alt: "Exterior render" },
-      { src: renderBedroom, alt: "Bedroom render" },
-    ],
-  },
-  "unity-homes-precinct": {
-    slug: "unity-homes-precinct",
-    name: "Unity Homes Precinct",
-    location: "Nairobi (Capital District). Infill-certified residential.",
-    tagline: "Net-Positive Residential Blocks",
-    hero: nairobi,
-    targetYield: "7–9%",
-    minInvestment: "€15,000",
-    status: "Phase II Delivery",
-    irr: "12%",
-    exit: "Stabilised Hold / Refinance",
-    holdPeriod: "7 Years",
-    ticketEntry: "€15k",
-    opportunity: [
-      "Unity Homes is the largest EDGE-certified residential precinct in East Africa, addressing the structural shortfall in middle-income housing within the Nairobi Capital District.",
-      "The precinct operates on a build-to-rent model with sale-and-leaseback structuring, providing institutional investors with predictable, indexed cashflows backed by a curated tenant pool.",
-    ],
-    renders: [
-      { src: renderExterior, alt: "Exterior render" },
-      { src: renderLiving, alt: "Living room render" },
-      { src: renderBedroom, alt: "Bedroom render" },
-    ],
-  },
-  "aria-towers": {
-    slug: "aria-towers",
-    name: "Aria Towers",
-    location: "Westlands Corporate Hub, Nairobi. Mixed-use Grade-A.",
-    tagline: "Grade-A Office & Serviced Residence",
-    hero: westlands,
-    targetYield: "9–11%",
-    minInvestment: "€50,000",
-    status: "Lease-Up",
-    irr: "14%",
-    exit: "Trade Sale to REIT",
-    holdPeriod: "6 Years",
-    ticketEntry: "€15k",
-    opportunity: [
-      "Westlands is Nairobi's primary corporate hub, hosting regional headquarters for the majority of multinational firms operating in East Africa. Grade-A vacancy remains below 6% with rental growth trending double digits.",
-      "Aria Towers combines premium office floors with serviced residences above — a counter-cyclical mix that has historically outperformed single-use assets across cycles.",
-    ],
-    renders: [
-      { src: westlands, alt: "Tower exterior" },
-      { src: renderLiving, alt: "Living room render" },
-      { src: renderExterior, alt: "Exterior render" },
-    ],
-  },
-  "crown-square": {
-    slug: "crown-square",
-    name: "Crown Square",
-    location: "Tatu City SEZ. Special Economic Zone Anchor.",
-    tagline: "SEZ Corporate Tax Shelter",
-    hero: tatu,
-    targetYield: "10–13%",
-    minInvestment: "€50,000",
-    status: "Pre-Construction",
-    irr: "17%",
-    exit: "Institutional Recap",
-    holdPeriod: "5 Years",
-    ticketEntry: "€15k",
-    opportunity: [
-      "Tatu City is a licensed Special Economic Zone offering a 10% corporate tax rate, VAT exemptions, and accelerated permitting. Crown Square is the SEZ's flagship mixed-use precinct.",
-      "Investors benefit from the SEZ's structural tax shelter while gaining exposure to one of the fastest-growing satellite cities on the continent, anchored by global tenants relocating from the Nairobi CBD.",
-    ],
-    renders: [
-      { src: tatu, alt: "SEZ render" },
-      { src: renderExterior, alt: "Exterior render" },
-      { src: renderLiving, alt: "Interior render" },
-    ],
-  },
-  "sgr-port-terminus-hub": {
-    slug: "sgr-port-terminus-hub",
-    name: "SGR Port Terminus Hub",
-    location: "Mombasa Coastal. Port-Adjacent Logistics.",
-    tagline: "Strategic Logistics Warehousing",
-    hero: mombasa,
-    targetYield: "11–14%",
-    minInvestment: "€250,000",
-    status: "Institutional Only · TRO",
-    irr: "18%",
-    exit: "Sale-Leaseback / Refinance",
-    holdPeriod: "8 Years",
-    ticketEntry: "Inst. only",
-    opportunity: [
-      "Mombasa is the gateway port for East and Central Africa, with the Standard Gauge Railway terminus driving an inland container surge that has outstripped warehouse supply by a wide margin.",
-      "The Terminus Hub is a Grade-A logistics facility positioned for long-term net leases to global 3PL operators, with cashflows backed by hard-currency contracts.",
-    ],
-    renders: [
-      { src: mombasa, alt: "Port render" },
-      { src: renderExterior, alt: "Exterior render" },
-      { src: tatu, alt: "Facility render" },
-    ],
-  },
-};
+const PROPERTIES = propertiesData as Record<string, Property>;
 
 export const Route = createFileRoute("/property/$slug")({
   loader: ({ params }): Property => {
@@ -230,7 +119,7 @@ function PropertyDetailPage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[1.6fr_1fr]">
           <div className="overflow-hidden border border-border">
             <img
-              src={p.hero}
+              src={`/${p.hero.replace(/^\//, "")}`} // Enforces a clean single leading slash
               alt={p.name}
               width={1600}
               height={1024}
@@ -272,6 +161,38 @@ function PropertyDetailPage() {
               <p key={i}>{para}</p>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Amenities Section */}
+      <section className="border-b border-border bg-card/20">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <h2 className="font-serif text-4xl text-ink">Amenities</h2>
+
+          {p.amenities && p.amenities.length > 0 ? (
+            <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {p.amenities.map((amenity: Amenity, i: number) => (
+                <div key={i} className="flex flex-col items-start p-5 border border-border/60 bg-background">
+                  {/* Container for the emoji */}
+                  <div className="flex h-10 w-10 items-center justify-center bg-muted text-2xl rounded-sm mb-4">
+                    {amenity.emoji}
+                  </div>
+                  <h3 className="font-serif text-lg text-ink font-medium">
+                    {amenity.name}
+                  </h3>
+                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                    {amenity.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-6 border border-dashed border-border p-6 text-center">
+              <p className="text-xs italic text-muted-foreground/60">
+                Detailed specification architecture pending project finalization.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -320,18 +241,23 @@ function PropertyDetailPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="font-serif text-4xl text-ink">Property Renders</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {p.renders.map((r: { src: string; alt: string }, i: number) => (
-              <div key={i} className="aspect-[4/3] overflow-hidden border border-border">
-                <img
-                  src={r.src}
-                  alt={r.alt}
-                  loading="lazy"
-                  width={1280}
-                  height={960}
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-            ))}
+            {p.renders.map((r: { src: string; alt: string }, i: number) => {
+              // Enforces a clean single leading slash regardless of JSON formatting
+              const cleanSrc = `/${r.src.replace(/^\//, "")}`;
+
+              return (
+                <div key={i} className="aspect-[4/3] overflow-hidden border border-border">
+                  <img
+                    src={cleanSrc} // Uses the formatted absolute path
+                    alt={r.alt}
+                    loading="lazy"
+                    width={1280}
+                    height={960}
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

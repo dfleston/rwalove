@@ -9,17 +9,13 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
 import { Route as PropertySlugRouteImport } from './routes/property.$slug'
+import { Route as PortfolioCityRouteImport } from './routes/portfolio.$city'
 
-const PortfolioRoute = PortfolioRouteImport.update({
-  id: '/portfolio',
-  path: '/portfolio',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LegalRoute = LegalRouteImport.update({
   id: '/legal',
   path: '/legal',
@@ -35,9 +31,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
+  id: '/portfolio/',
+  path: '/portfolio/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PropertySlugRoute = PropertySlugRouteImport.update({
   id: '/property/$slug',
   path: '/property/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioCityRoute = PortfolioCityRouteImport.update({
+  id: '/portfolio/$city',
+  path: '/portfolio/$city',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -45,49 +51,65 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/apply': typeof ApplyRoute
   '/legal': typeof LegalRoute
-  '/portfolio': typeof PortfolioRoute
+  '/portfolio/$city': typeof PortfolioCityRoute
   '/property/$slug': typeof PropertySlugRoute
+  '/portfolio/': typeof PortfolioIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/apply': typeof ApplyRoute
   '/legal': typeof LegalRoute
-  '/portfolio': typeof PortfolioRoute
+  '/portfolio/$city': typeof PortfolioCityRoute
   '/property/$slug': typeof PropertySlugRoute
+  '/portfolio': typeof PortfolioIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/apply': typeof ApplyRoute
   '/legal': typeof LegalRoute
-  '/portfolio': typeof PortfolioRoute
+  '/portfolio/$city': typeof PortfolioCityRoute
   '/property/$slug': typeof PropertySlugRoute
+  '/portfolio/': typeof PortfolioIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/apply' | '/legal' | '/portfolio' | '/property/$slug'
+  fullPaths:
+    | '/'
+    | '/apply'
+    | '/legal'
+    | '/portfolio/$city'
+    | '/property/$slug'
+    | '/portfolio/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/apply' | '/legal' | '/portfolio' | '/property/$slug'
-  id: '__root__' | '/' | '/apply' | '/legal' | '/portfolio' | '/property/$slug'
+  to:
+    | '/'
+    | '/apply'
+    | '/legal'
+    | '/portfolio/$city'
+    | '/property/$slug'
+    | '/portfolio'
+  id:
+    | '__root__'
+    | '/'
+    | '/apply'
+    | '/legal'
+    | '/portfolio/$city'
+    | '/property/$slug'
+    | '/portfolio/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ApplyRoute: typeof ApplyRoute
   LegalRoute: typeof LegalRoute
-  PortfolioRoute: typeof PortfolioRoute
+  PortfolioCityRoute: typeof PortfolioCityRoute
   PropertySlugRoute: typeof PropertySlugRoute
+  PortfolioIndexRoute: typeof PortfolioIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/portfolio': {
-      id: '/portfolio'
-      path: '/portfolio'
-      fullPath: '/portfolio'
-      preLoaderRoute: typeof PortfolioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/legal': {
       id: '/legal'
       path: '/legal'
@@ -109,11 +131,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portfolio/': {
+      id: '/portfolio/'
+      path: '/portfolio'
+      fullPath: '/portfolio/'
+      preLoaderRoute: typeof PortfolioIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/property/$slug': {
       id: '/property/$slug'
       path: '/property/$slug'
       fullPath: '/property/$slug'
       preLoaderRoute: typeof PropertySlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/$city': {
+      id: '/portfolio/$city'
+      path: '/portfolio/$city'
+      fullPath: '/portfolio/$city'
+      preLoaderRoute: typeof PortfolioCityRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -123,8 +159,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ApplyRoute: ApplyRoute,
   LegalRoute: LegalRoute,
-  PortfolioRoute: PortfolioRoute,
+  PortfolioCityRoute: PortfolioCityRoute,
   PropertySlugRoute: PropertySlugRoute,
+  PortfolioIndexRoute: PortfolioIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

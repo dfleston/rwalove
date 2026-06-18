@@ -1,0 +1,190 @@
+{
+    "nairobi": {
+        "slug": "nairobi",
+        "name": "Nairobi Capital",
+        "tagline": "Corporate demand structurally outpaces supply.",
+        "hero": "images/cities/market-nairobi.jpg",
+        "secondaryImage": "images/cities/market-westlands.jpg",
+        "description": [
+            "Nairobi is home to the African headquarters of over 40 multinational corporations and the ecosystem that produced M-Pesa.",
+            "The city represents the primary entry point for institutional capital in East Africa. The structural shortage of premium, secure, and fully serviced accommodation has created a landlord-favorable environment where quality-managed stock routinely achieves 80%+ annual occupancy."
+        ],
+        "marketConditions": [
+            {
+                "label": "Vacancy Rate",
+                "value": "< 4% in Grade-A"
+            },
+            {
+                "label": "Yield Profile",
+                "value": "8–12% Net"
+            },
+            {
+                "label": "Tenant Base",
+                "value": "Corporate & DFI"
+            },
+            {
+                "label": "Currency",
+                "value": "USD-Pegged Rents"
+            }
+        ],
+        "offers": {
+            "enjoy": [
+                "Vibrant expatriate communities in Westlands and Kilimani.",
+                "World-class culinary scene and nightlife.",
+                "Direct proximity to Nairobi National Park and wildlife conservation.",
+                "Premium international schools and healthcare infrastructure."
+            ],
+            "invest": [
+                "Highly liquid secondary market for stabilized assets.",
+                "Strong capital appreciation driven by land scarcity.",
+                "USD-denominated corporate leases insulate against FX risk.",
+                "Year-round demand unaffected by tourism seasonality."
+            ]
+        },
+        "carousel": [
+            {
+                "src": "images/cities/market-nairobi.jpg",
+                "alt": "Nairobi Skyline"
+            },
+            {
+                "src": "images/cities/market-westlands.jpg",
+                "alt": "Westlands Corporate District"
+            },
+            {
+                "src": "images/properties/kilimani-premium-towers/hero.jpg",
+                "alt": "Premium Residential"
+            }
+        ],
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.17142410886!2d36.73905063065096!3d-1.2920659999999914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+        "units": [
+            "kilimani-premium-towers",
+            "unity-homes-precinct",
+            "aria-towers",
+            "oak",
+            "gemini-residency",
+            "grosvenor-residency"
+        ]
+    },
+    "tatu": {
+        "slug": "tatu",
+        "name": "Tatu City",
+        "tagline": "Special Economic Zone — infrastructure-stage entry.",
+        "hero": "images/cities/market-tatu.jpg",
+        "secondaryImage": "images/cities/market-tatu.jpg",
+        "description": [
+            "Tatu City is a 5,000-acre Special Economic Zone 30km from Nairobi CBD — Africa's most advanced planned urban development, with its own governance, power, and road infrastructure.",
+            "Residential and hospitality land within the SEZ is a fundamentally different risk profile: infrastructure-stage appreciation, not current yield. The thesis is entry price and zoning certainty."
+        ],
+        "marketConditions": [
+            {
+                "label": "Tax Regime",
+                "value": "10% Corporate Tax"
+            },
+            {
+                "label": "Status",
+                "value": "Gazetted SEZ"
+            },
+            {
+                "label": "Anchor Tenants",
+                "value": "250+ Multinationals"
+            },
+            {
+                "label": "Infrastructure",
+                "value": "Independent Grid"
+            }
+        ],
+        "offers": {
+            "enjoy": [
+                "Master-planned pedestrian-friendly urban design.",
+                "Crawford International School and Nova Pioneer campuses.",
+                "Uninterrupted power and water supply managed internally.",
+                "Secure, gated residential precincts with extensive green spaces."
+            ],
+            "invest": [
+                "Zero VAT and import duty exemptions within the SEZ.",
+                "Massive capital appreciation as phase 3 infrastructure completes.",
+                "High demand from executives working within the SEZ industrial parks.",
+                "Streamlined permitting and business registration processes."
+            ]
+        },
+        "carousel": [
+            {
+                "src": "images/cities/market-tatu.jpg",
+                "alt": "Tatu City Aerial"
+            },
+            {
+                "src": "images/properties/jabali/hero.jpg",
+                "alt": "Jabali Development"
+            },
+            {
+                "src": "images/properties/jabali/render_1.jpg",
+                "alt": "Jabali Render"
+            }
+        ],
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0494483786273!2d36.9367!3d-1.1246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f9f4b4b4b4b%3A0x1234567890abcdef!2sTatu%2C%20City!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+        "units": [
+            "jabali"
+        ]
+    },
+    "mombasa": {
+        "slug": "mombasa",
+        "name": "Mombasa Coastal",
+        "tagline": "Coastal leisure with diaspora pull — premium nightly rates.",
+        "hero": "images/cities/market-mombasa.jpg",
+        "secondaryImage": "images/cities/market-mombasa.jpg",
+        "description": [
+            "Mombasa's Nyali and Bamburi shoreline is Kenya's premier coastal leisure destination. Tourism is rebounding strongly post-2022 with growing intra-African and European travel.",
+            "Boutique serviced villas and apartments command premium nightly rates that outperform Nairobi on a per-night basis — with a strong right-of-use story for investors seeking physical discovery."
+        ],
+        "marketConditions": [
+            {
+                "label": "Peak Rates",
+                "value": "$180–$380 / Night"
+            },
+            {
+                "label": "Driver",
+                "value": "Tourism & Diaspora"
+            },
+            {
+                "label": "Peak Season",
+                "value": "Nov – March"
+            },
+            {
+                "label": "Location Focus",
+                "value": "Nyali & Port Adjacent"
+            }
+        ],
+        "offers": {
+            "enjoy": [
+                "White sand beaches and Indian Ocean leisure lifestyle.",
+                "Rich Swahili cultural heritage and UNESCO-listed Old Town.",
+                "Proximity to marine national parks and water sports.",
+                "Right-of-use allocations for investor holidays."
+            ],
+            "invest": [
+                "High-yielding short-term rental models targeting affluent tourists.",
+                "Strong secondary market demand from the Kenyan diaspora.",
+                "Strategic proximity to the Standard Gauge Railway (SGR) terminus.",
+                "Hard-currency cash flows during peak international seasons."
+            ]
+        },
+        "carousel": [
+            {
+                "src": "images/cities/market-mombasa.jpg",
+                "alt": "Mombasa Coastline"
+            },
+            {
+                "src": "images/properties/sgr-port-terminus-hub/hero.jpg",
+                "alt": "Terminus Hub"
+            },
+            {
+                "src": "images/properties/sgr-port-terminus-hub/facility.jpg",
+                "alt": "Logistics Facility"
+            }
+        ],
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127357.5583569472!2d39.5935105!3d-4.0434771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012e78ece8767%3A0xc394e1d67e1dc553!2sMombasa%2C%20Kenya!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
+        "units": [
+            "sgr-port-terminus-hub"
+        ]
+    }
+}

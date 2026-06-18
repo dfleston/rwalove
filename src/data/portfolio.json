@@ -1,0 +1,55 @@
+[
+    {
+        "id": "nairobi",
+        "city": "Nairobi Capital",
+        "headline": "Corporate demand structurally outpaces supply.",
+        "thesis": "Nairobi is home to the African headquarters of over 40 multinational corporations and the ecosystem that produced M-Pesa. Corporate demand for premium serviced accommodation structurally outpaces supply — generating 80%+ annual occupancy in quality-managed stock.",
+        "context": [
+            "2-bed serviced units in Westlands and Kilimani: $2,500–$4,500 USD/month",
+            "Demand driven by corporates, DFIs and tech sector — non-seasonal",
+            "USD-denominated rents insulate against Kenyan shilling volatility",
+            "Direct flights from Madrid, London, Dubai, and Amsterdam"
+        ],
+        "hero": "images/cities/market-nairobi.jpg",
+        "units": [
+            "kilimani-premium-towers",
+            "aria-towers",
+            "oak",
+            "gemini-residency",
+            "grosvenor-residency"
+        ]
+    },
+    {
+        "id": "tatu",
+        "city": "Tatu City",
+        "headline": "Special Economic Zone — infrastructure-stage entry.",
+        "thesis": "Tatu City is a 5,000-acre Special Economic Zone 30km from Nairobi CBD — Africa's most advanced planned urban development, with its own governance, power, and road infrastructure. Over 250 companies have signed up. Residential and hospitality land within the SEZ is a fundamentally different risk profile: infrastructure-stage appreciation, not current yield. The thesis is entry price and zoning certainty.",
+        "context": [
+            "Special Economic Zone status: tax incentives, own governance, infrastructure",
+            "Anchor tenants include DHL, Unilever, Krones, and over 250 companies",
+            "Phase 3 residential and hospitality plots now available to investors",
+            "Nairobi CBD 30-minute drive — growing shuttle and future rail connection"
+        ],
+        "hero": "images/cities/market-tatu.jpg",
+        "units": [
+            "jabali",
+            "unity-homes-precinct"
+        ]
+    },
+    {
+        "id": "mombasa",
+        "city": "Mombasa",
+        "headline": "Coastal leisure with diaspora pull — premium nightly rates.",
+        "thesis": "Mombasa's Nyali and Bamburi shoreline is Kenya's premier coastal leisure destination. Tourism is rebounding strongly post-2022 with growing intra-African and European travel. Boutique serviced villas and apartments command premium nightly rates that outperform Nairobi on a per-night basis — with a strong right-of-use story for investors seeking physical discovery.",
+        "context": [
+            "Boutique serviced units: $180–$380 USD/night (peak season)",
+            "Growing diaspora demand: Kenyan expats investing in coastal lifestyle assets",
+            "UNESCO-listed Old Town proximity adds cultural tourism draw",
+            "Seasonal profile — peak Nov–Mar aligns with European winter escape"
+        ],
+        "hero": "images/properties/market-mombasa.jpg",
+        "units": [
+            "sgr-port-terminus-hub"
+        ]
+    }
+]
