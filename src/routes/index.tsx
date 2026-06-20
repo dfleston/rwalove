@@ -1,11 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
-import heroCity from "@/assets/hero-city.jpg";
+
 
 import portfolioData from "@/data/portfolio.json";
 import propertiesData from "@/data/properties.json";
 import { FeaturedUnits } from "@/components/site/FeaturedUnits";
 import { MarketComparisonTable } from "@/components/site/Comps";
+import { OnionDiagram } from '@/components/site/OnionDiagram';
+
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -132,7 +135,7 @@ function HomePage() {
           <div className="relative">
             <div className="absolute -inset-3 -z-10 bg-gold-soft/60" />
             <img
-              src={heroCity}
+              src="images/home/hero.png"
               alt="Aerial view of modern Nairobi residential development"
               width={1600}
               height={1200}
@@ -207,8 +210,8 @@ function HomePage() {
               The Kenya Thesis
             </h2>
             <p className="mt-4 text-sm text-muted-foreground">
-              A determinate process for capital deployment into the
-              continent's fastest-compounding real estate economy.
+              A friendly and exciting gateway to invest in
+              one of the World's fastest-growing real estate markets.
             </p>
           </div>
           <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
@@ -260,7 +263,7 @@ function HomePage() {
               to="/portfolio"
               className="mt-8 inline-flex items-center justify-center bg-gold px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-white"
             >
-              Explore Tsavo Lifestyle →
+              Explore Lifestyled Investment  →
             </Link>
           </div>
 
@@ -474,6 +477,14 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+
+
+      <OnionDiagram />
+
+
+
+
 
       {/* ========================================================= */}
       {/* NEW SECTION: SPV SEZ BENEIFTS (Positioned AFTER Why Tokenized) */}

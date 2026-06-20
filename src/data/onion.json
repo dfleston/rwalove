@@ -1,0 +1,162 @@
+[
+    {
+        "id": "core",
+        "label": "Core",
+        "color": "#EBE2CB",
+        "textColor": "#171306",
+        "description": "African real estate — the physical asset itself. Initially residential and mixed-use properties in Nairobi, Tatu City, Mombasa, and Accra.",
+        "wedges": [
+            {
+                "id": "core_asset",
+                "label": "African Real Estate",
+                "description": "The physical asset itself: African real estate, initially residential and mixed-use properties in Nairobi, Tatu City, Mombasa, and Accra.",
+                "span": 1
+            }
+        ]
+    },
+    {
+        "id": "tokenized_assets",
+        "label": "Tokenized Assets",
+        "color": "#C8841D",
+        "textColor": "#171306",
+        "description": "What makes the Core exist as a digital, ownable, transferable financial instrument — not a service rendered to the asset, but the mechanism that constitutes it as investable.",
+        "wedges": [
+            {
+                "id": "asset_token",
+                "label": "Asset-Level Token",
+                "description": "One SPV and one token per individual real estate asset. Direct, traceable exposure tied to a single physical collateral.",
+                "span": 1
+            },
+            {
+                "id": "mother_token",
+                "label": "Portfolio Mother-Token",
+                "description": "One SPV and one aggregating token over the full portfolio. Designed to be the liquid layer; reduces idiosyncratic single-asset risk and is the layer expected to sustain secondary market activity as it matures.",
+                "span": 1
+            }
+        ]
+    },
+    {
+        "id": "features_services",
+        "label": "Features / Services",
+        "color": "#8A5A2A",
+        "textColor": "#EBE2CB",
+        "description": "The properties the investor directly experiences once the asset is tokenized. Features and services are one ring, not two — each feature is simultaneously a service delivered to the holder.",
+        "wedges": [
+            {
+                "id": "fractionable",
+                "label": "Fractionable",
+                "description": "Institutional-scale assets broken into accessible ticket sizes for any allocator.",
+                "span": 1
+            },
+            {
+                "id": "liquidable_routable",
+                "label": "Liquidable / Routable",
+                "description": "Exit is possible without waiting for a buyer to independently appear; routed through the put mechanism and the liquidity architecture.",
+                "span": 1
+            },
+            {
+                "id": "remortgageable",
+                "label": "Remortgageable",
+                "description": "A first-order feature, equal in weight to the others. The token can be used as collateral to obtain liquidity without selling the position. Three channels: via DeFi (requires reliable price oracles), via external financial partners, or via the issuer itself (Gurumbé / the Liquidity SPV).",
+                "span": 1
+            },
+            {
+                "id": "programmable",
+                "label": "Programmable",
+                "description": "Yield distribution, compliance checks, and governance can be automated and enforced in code rather than through manual intermediation.",
+                "span": 1
+            },
+            {
+                "id": "convenient",
+                "label": "Convenient",
+                "description": "No notary, no independent due diligence burden, no traditional transaction overhead for the investor.",
+                "span": 1
+            },
+            {
+                "id": "info_rich",
+                "label": "Info Rich",
+                "description": "Asset performance data and tenant payment history are continuously captured. Feeds both the credit-scoring layer (tenant side) and the asset valuation layer (asset side): Loanable = Credit Score / Info Rich = Asset Performance.",
+                "span": 1
+            },
+            {
+                "id": "higher_yield",
+                "label": "Higher Yield",
+                "description": "Yield differential versus comparable developed-market real estate — the basic economic hook for capital crossing into the asset class.",
+                "span": 1
+            },
+            {
+                "id": "rent_day_one",
+                "label": "Yield from Day 0",
+                "description": "Investor receives a partial yield ramp from the day of purchase, even during pre-construction, financed by Gurumbé / the Liquidity SPV against future rental income — not by the investor.",
+                "span": 1
+            }
+        ]
+    },
+    {
+        "id": "enablers",
+        "label": "Enablers",
+        "color": "#046A38",
+        "textColor": "#EBE2CB",
+        "description": "The legal, operational, and data infrastructure that gives the Features real-world executable form. Four enablers channel inward into Features. The fifth — Liquidity SPV — is directionally distinct: it channels capital from the outer Liquidity ring into the system.",
+        "wedges": [
+            {
+                "id": "oracles",
+                "label": "Oracles / Surveyors",
+                "description": "Two sources feed the NAV and valuation layer: the asset's own track record (occupancy, payment, maintenance history) and external market intelligence — Estate Intel for continuous data, plus a RICS-certified local surveying firm (e.g. Citiscape, Kenya Valuers, Mwaka Musau in Nairobi) for the formal annual valuation.",
+                "span": 1
+            },
+            {
+                "id": "legal_spv",
+                "label": "Legal Structure SPV",
+                "description": "The asset-level and mother-token SPV structures, incorporated in an appropriate African jurisdiction, holding title, custody agreements, and offtake contracts.",
+                "span": 1
+            },
+            {
+                "id": "operating_co",
+                "label": "Operating Company",
+                "description": "The entity that manages tenants, collects rent, coordinates with developers, and produces the operational data that Oracles consume and that Rent-from-Day-1 depends on. Distinct from the legal SPV and the token — this is the operational layer that makes the building function.",
+                "span": 1
+            },
+            {
+                "id": "credit_lines",
+                "label": "Credit Lines",
+                "description": "The financing facilities — private debt notes, bank lines — that fund the lending book and the put book inside the Liquidity SPV. Distinct from the Liquidity ring itself: this is the funding source, not the liquidity-providing mechanism.",
+                "span": 1
+            },
+            {
+                "id": "liquidity_spv",
+                "label": "Liquidity SPV",
+                "description": "The legal vehicle that channels the outer Liquidity ring (AMM, Anchor investors, Gurumbé) into operable form: issues private debt notes, holds the put book, runs the lending/remortgage book. Directionally distinct from the other four Enablers — it channels outside-in, from the Liquidity ring toward the rest of the system.",
+                "span": 1,
+                "isHinge": true
+            }
+        ]
+    },
+    {
+        "id": "liquidity",
+        "label": "Liquidity",
+        "color": "#B5531D",
+        "textColor": "#EBE2CB",
+        "description": "The outermost ring. Not parallel to the others — it is the gate that determines whether the entire system is investable to global capital. Liquidity is downstream of every other ring and upstream of the product’s institutional credibility.",
+        "wedges": [
+            {
+                "id": "amm",
+                "label": "AMM",
+                "description": "Passive algorithmic liquidity pool for normal market conditions. Absorbs small and medium transactions once sufficient volume exists. Not assumed necessary at launch — access convenience and remortgageability substitute for it early on.",
+                "span": 1
+            },
+            {
+                "id": "anchor",
+                "label": "Anchor Investors",
+                "description": "3-5 institutional investors contractually committed to buy back tokens up to a defined volume at no less than -20/-30% of updated NAV, compensated with a premium or preferential access to future issuance.",
+                "span": 1
+            },
+            {
+                "id": "gurumbe",
+                "label": "Gurumbé (Last Resort)",
+                "description": "The final backstop layer, funded from the Liquidity SPV, financed initially via private debt (target 8-12% coupon) and later via cheaper bank debt as the portfolio scales.",
+                "span": 1
+            }
+        ]
+    }
+]

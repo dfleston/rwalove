@@ -10,7 +10,6 @@ export function MarketComparisonTable() {
         { region: "Africa", city: "Accra, Ghana", yield: "7.0% – 11.0%", appreciation: "5% – 8%", highlight: true },
         { region: "Africa", city: "Lagos, Nigeria", yield: "8.0% – 12.0%", appreciation: "6% – 10%", highlight: true },
         { region: "Africa", city: "Cairo, Egypt", yield: "6.0% – 9.0%", appreciation: "7% – 15%", highlight: true },
-
     ];
 
     return (
