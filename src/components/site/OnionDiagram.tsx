@@ -251,7 +251,7 @@ export function OnionDiagram() {
       `}</style>
 
       {/* Header */}
-      <header className="onion-header">
+      <header className="onion-header" id="onion-master-container">
         <div style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, letterSpacing: '0.3em', color: '#c8841d', marginBottom: 6 }}>
           KIBO &middot; GURUMB&Eacute; CAPITAL
         </div>
